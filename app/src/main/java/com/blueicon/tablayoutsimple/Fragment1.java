@@ -6,17 +6,21 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 /**
  * Created by developer on 22/03/17.
  */
 
 public class Fragment1 extends Fragment {
+  private TextView tab1;
 
     @Override
     public View onCreateView(LayoutInflater inflater,ViewGroup container, Bundle savedInstanceState) {
         Log.d("CONSOLE","ITEM 1 :::::::::: onCreateView");
         View rootView =  inflater.inflate(R.layout.fragment_1,container,false);
+        tab1 = (TextView)rootView.findViewById(R.id.tab1);
+
         return  rootView;
     }
 

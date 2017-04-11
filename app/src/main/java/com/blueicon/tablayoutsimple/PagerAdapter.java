@@ -4,6 +4,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.util.Log;
+import android.view.View;
+import android.view.ViewGroup;
 
 public class PagerAdapter extends FragmentPagerAdapter {
     private int numberTabs;
@@ -25,17 +27,8 @@ public class PagerAdapter extends FragmentPagerAdapter {
                 Log.d("CONSOLE", ":::: 1");
 
                 Fragment2 tab2 = new Fragment2();
+
                 return tab2;
-            case 2:
-                Log.d("CONSOLE", ":::: 2");
-
-                Fragment3 tab3 = new Fragment3();
-                return tab3;
-            case 3:
-                Log.d("CONSOLE", ":::: 2");
-
-                Fragment4 tab4 = new Fragment4();
-                return tab4;
             default:
                 return null;
         }
@@ -45,4 +38,11 @@ public class PagerAdapter extends FragmentPagerAdapter {
     public int getCount() {
         return numberTabs;
     }
+
+    @Override
+    public void destroyItem(ViewGroup container, int position, Object object) {
+        container.removeView((View)object);
+    }
+
+
 }

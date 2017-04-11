@@ -13,4 +13,8 @@
         android:layout_height="wrap_content"
         android:text="Fragment 3"/>
 
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="wrap_content" />
+
 </LinearLayout>
